@@ -1,0 +1,15 @@
+<snippet>
+    <content><![CDATA[
+    	
+class ${1:${TM_FILENAME/(.+)\..+|.*/$1/:ComponentName}} {
+	constructor() {
+	}
+}
+
+module.exports = ${1:${TM_FILENAME/(.+)\..+|.*/$1/:ComponentName}}
+
+]]></content>
+    <tabTrigger>clas</tabTrigger>
+    <scope>source.js -(meta)</scope>
+    <description>class</description>
+</snippet>

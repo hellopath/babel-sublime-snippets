@@ -8,8 +8,8 @@ class ${1:${TM_FILENAME/(.+)\..+|.*/$1/:ComponentName}} extends BaseComponent {
 	constructor() {
 		super()
 	}
-	render() {
-		super.render('${1:${TM_FILENAME/(.+)\..+|.*/$1/:ComponentName}}', '#parent', template, scope)
+	render(parent) {
+		super.render('${1:${TM_FILENAME/(.+)\..+|.*/$1/:ComponentName}}', parent, template, scope)
 	}
 	componentWillMount() {
 		super.componentWillMount()

@@ -1,0 +1,31 @@
+<snippet>
+    <content><![CDATA[
+
+import BaseComponent from 'BaseComponent'
+import template from '${1:${TM_FILENAME/(.+)\..+|.*/$1/:ComponentName}}_hbs'
+
+class ${1:${TM_FILENAME/(.+)\..+|.*/$1/:ComponentName}} extends BaseComponent {
+	constructor() {
+		super()
+	}
+	render() {
+		super.render('${1:${TM_FILENAME/(.+)\..+|.*/$1/:ComponentName}}', '#parent', template, scope)
+	}
+	componentWillMount() {
+		super.componentWillMount()
+	}
+	componentDidMount() {
+		super.componentDidMount()
+	}
+	componentWillUnmount() {
+		super.componentWillUnmount()
+	}
+}
+
+export default ${1:${TM_FILENAME/(.+)\..+|.*/$1/:ComponentName}}
+
+]]></content>
+    <tabTrigger>scc</tabTrigger>
+    <scope>source.js -(meta)</scope>
+    <description>Simple: class component</description>
+</snippet>
